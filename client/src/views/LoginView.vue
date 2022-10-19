@@ -36,20 +36,20 @@ function hasError() {
         <div class="field">
             <label class="label">username</label>
             <div class="control">
-                <input class="input" type="text" placeholder="username" v-model="username">
+                <input class="input" type="text" placeholder="username" value="username">
             </div>
         </div>
 
         <div class="field">
             <label class="label">password</label>
             <div class="control">
-                <input class="input" type="password" placeholder="password" v-model="password">
+                <input class="input" type="password" placeholder="password" value="password">
             </div>
         </div>
         <div>
-            <button class="button is-link" @click="submit">submit</button>
+            <button class="button is-link" onclick="submit">submit</button>
         </div>
-        <div v-if="hasError()">ERROR WILL DISPLAY HERE (no account with username, wrong username or password)</div>
+        
 
         <br/>
         <br/>
