@@ -47,23 +47,23 @@ create and connect to MongoDB Atlas [X]
 
 [X] added vuejs for frontend
 [X] fix nav bar by adding vue router
-[X] immplement simple login/ logout in vue 
-[X] creat an array of task
-[X] craete a tasklist component
-[X] render all tasks in array to tasklist
-[X] create 2 components login and register form
-[X] access and display on dashboard view
-[X] create a form to add task, remove task, edit task
-[X] create user edit component
-[X] create user exercise list component
-[X] finish styling home page, login, logout, user edit, user exercise list
-[X] edit exercise form
-[X] create footer component
+[ ] craete a task component
+[ ] creat an array of task
+[ ] craete a tasklist component
+[ ] render all tasks in array to tasklist
+[ ] create 2 components login and register form
 [ ] add pinia a list of all task
+[ ] access and display on dashboard view
+[ ] create a form to add task, remove task, edit task
+[ ] create user edit component
+[ ] create user exercise list component
+[ ] finish styling home page, login, logout, user edit, user exercise list
+[ ] edit exercise form
+[ ] create footer component
 
 [X] define user table (collection)
 [X] read reqest and respose doc in ExpressJS
-[X] watch CS 253 Stanford
+[ ] watch CS 253 Stanford
 [ ] send cookie to login user and have them send back
 [ ] build logout api
 [ ] document how to use Session authentication

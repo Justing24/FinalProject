@@ -4,6 +4,7 @@
   import session,{logout} from '../stores/session.js';
   import router from '@/router'
   let isActive = ref(false);
+
   function redirect() {
     logout()
     router.push({name:"home"})
@@ -62,4 +63,5 @@
 </template>
 
 <style>
+
 </style>
