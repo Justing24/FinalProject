@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import NavVue from './components/Nav.vue'
-import FooterVue from './components/Footer.vue'
+    import { RouterView } from 'vue-router'
+    import NavVue from './components/Nav.vue';
 </script>
 
 <template>
-      <NavVue />
+    
+  <header>
+    <NavVue />
+  </header>
 
-      <div class="container">
-            <RouterView />
-      </div>
+  <div class="container">
+    <RouterView />
+  </div>
 
-      <FooterVue />      
 </template>
 
 <style scoped>

@@ -1,11 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
 import SignUpView from '../views/SignUpView.vue'
 import LoginView from '../views/LoginView.vue'
 import AdminView from '../views/AdminView.vue'
-import ProfileView from '../views/ProfileView.vue'
-import PageNotFoundView from '../views/404View.vue'
 
 
 const router = createRouter({
@@ -15,11 +12,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView
     },
     {
       path: '/signup',
@@ -32,21 +24,14 @@ const router = createRouter({
       component: LoginView
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: ProfileView
+    
     },
     {
       path: '/admin',
       name: 'admin',
       component: AdminView
-    },
-    // catch all 404
-    {
-      path: '/:catchAll(.*)',
-      name: 'NotFound',
-      component: PageNotFoundView
     }
+  
   ]
 })
 

@@ -2,13 +2,10 @@
 import router from '@/router';
 import {ref} from 'vue';
 import session,{login} from '../stores/session.js';
-
 let username = ref("")
 let password = ref("")
 let has_error = ref(false)
-
 //console.log(session.user)
-
 function submit() {
     has_error.value = false
     if (username.value === "" || password.value === "") {
@@ -17,17 +14,14 @@ function submit() {
     }
     login(username.value, password.value)
     //console.log(session.user)
-
     //if (session.user != null) {
     router.push({name:"profile"})
         //console.log("router passed")
     //}
 }
-
 function hasError() {
     return has_error.value
 }
-
 </script>
 
 <template> 
@@ -62,3 +56,9 @@ function hasError() {
         <a href="">forgot password?</a>
     </div>
 </template>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Secu

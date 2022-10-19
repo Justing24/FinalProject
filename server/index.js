@@ -4,13 +4,13 @@ const port = 3000
 const LoginRouter = require('./routes/login')
 const ProfileRouter = require('./routes/profile')
 
-//MongoDB Atlas connection
+
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://root:root@cluster0.ncrlwhu.mongodb.net/?retryWrites=true&w=majority', () => {
+mongoose.connect('mongodb://localhost:27017/database', () => {
     console.log('db connected')
 })
 
-// Middleware
+
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -22,10 +22,6 @@ app.get('/', (req, res) => {
 app.use(LoginRouter)
 app.use(ProfileRouter)
 
-
-
-// to handle invalid route, create a 404 page, 
-// use app.get('*', 404.html). Need to pust this route last
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
