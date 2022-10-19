@@ -1,20 +1,16 @@
 <script setup lang="ts">
-    import { RouterView } from 'vue-router'
-    import NavVue from './components/Nav.vue';
+import { RouterLink, RouterView } from 'vue-router'
+import NavVue from './components/Nav.vue';
 </script>
 
 <template>
-    
   <header>
-    <NavVue />
+
+    <NavVue></NavVue>
   </header>
 
-  <div class="container">
-    <RouterView />
-  </div>
-
+  <RouterView />
 </template>
 
 <style scoped>
-
 </style>
