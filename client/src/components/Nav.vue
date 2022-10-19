@@ -3,12 +3,10 @@ import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import session, { login, logout } from '../stores/session' 
 import LoginBadge from './LoginBadge.vue';
-
 // for user sign in
 let isActive = ref(false);
 // for navbar
 let isOpen = ref(false);
-
 // closeDropdownMenu = function(){
 // isActive = !isActive
 // };
@@ -41,7 +39,6 @@ let isOpen = ref(false);
         <router-link to="/stats" class="navbar-item">
           Stats
         </router-link>
-
       </div>
 
       <div class="navbar-end">
@@ -125,6 +122,4 @@ let isOpen = ref(false);
 
 
 <style lang="scss" scoped>
-
-
 </style>

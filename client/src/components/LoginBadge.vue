@@ -1,7 +1,6 @@
 <script setup lang="ts">
     import session, { login, logout } from '../stores/session'
     
-
 </script>
 
 <template>
@@ -17,7 +16,6 @@
 
 
 <style scoped>
-
 .avatar {
     display: flex;
     align-items: center;

@@ -13,5 +13,4 @@ import NavVue from './components/Nav.vue';
 </template>
 
 <style scoped>
-
 </style>
