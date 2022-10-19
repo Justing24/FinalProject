@@ -6,7 +6,7 @@ const ProfileRouter = require('./routes/profile')
 
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://root:root@cluster0.ncrlwhu.mongodb.net/?retryWrites=true&w=majority', () => {
+mongoose.connect('mongodb://localhost:27017/database', () => {
     console.log('db connected')
 })
 
