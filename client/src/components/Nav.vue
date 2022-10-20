@@ -10,7 +10,7 @@ let isActive = ref(false);
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
                 <img
-                    src="./images/logo.jpg"
+                    src="../images/logo.jpg"
                     class="logo"
                 />
             </a>

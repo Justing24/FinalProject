@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSession } from '../models/session';
+import { useSession } from '../stores/session';
 const session = useSession();
 </script>
 

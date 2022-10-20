@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useSession } from '../models/session';
+import { useSession } from '../stores/session';
 const { Register } = useSession();
 
 const handle = ref('');
