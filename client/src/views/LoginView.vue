@@ -1,64 +1,134 @@
 <script setup lang="ts">
-import router from '@/router';
-import {ref} from 'vue';
-import session,{login} from '../stores/session.js';
-let username = ref("")
-let password = ref("")
-let has_error = ref(false)
-//console.log(session.user)
-function submit() {
-    has_error.value = false
-    if (username.value === "" || password.value === "") {
-        has_error.value = true
-        return
-    }
-    login(username.value, password.value)
-    //console.log(session.user)
-    //if (session.user != null) {
-    router.push({name:"profile"})
-        //console.log("router passed")
-    //}
-}
-function hasError() {
-    return has_error.value
-}
+import { ref } from 'vue';
+import { useSession } from '../models/session';
+
+const { Login } = useSession();
+
+const email = ref('');
+const password = ref('');
 </script>
 
-<template> 
-   <br/>
-    <br/>
-    <div class="column is-4 is-offset-4">
-        <div class="title">Login</div>
-        <div style="color:red" >Try login with username: Bob ,password: bob123</div>
-        <div>or go to "/admin" route to see mockdata, the "/admin" route is not protected
-            to see the mock data, but the "/profile" require user login.
+<template>
+    <div class="section">
+        <div class="wrap">
+            <form
+                class="login-form form"
+                @submit.prevent="Login(email, password)"
+            >
+                <div class="form-header">
+                    <h3>Login</h3>
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        class="form-input"
+                        placeholder="Email"
+                        required
+                        v-model="email"
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="password"
+                        class="form-input"
+                        placeholder="Password"
+                        required
+                        v-model="password"
+                    />
+                </div>
+                <div class="form-group">
+                    <a href="#" class="form-forgot">Forgot Password?</a>
+                </div>
+                <div class="form-group">
+                    <button class="form-button" type="submit">Login</button>
+                </div>
+                <div class="form-footer">
+                    Don't have an account?
+                    <a href="/register.html">Sign Up</a>
+                </div>
+            </form>
         </div>
-        <div class="field">
-            <label class="label">username</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="username" value="username">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">password</label>
-            <div class="control">
-                <input class="input" type="password" placeholder="password" value="password">
-            </div>
-        </div>
-        <div>
-            <button class="button is-link" onclick="submit">submit</button>
-        </div>
-        
-
-        <br/>
-        <br/>
-        <a href="">forgot password?</a>
     </div>
 </template>
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Secu
+
+<style scoped lang="scss">
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    background: #eeeeee;
+    box-shadow: 7px 7px 30px rgb(165, 164, 164);
+    border-radius: 10px;
+}
+
+.form-input {
+    background: #fafafa;
+    border: 1px solid #e2e2e2;
+    padding: 1em;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.ml {
+    margin-left: 2em;
+}
+
+.form-button {
+    background: #49bfd6;
+    border: 1px solid #ddd;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.form-header h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.form-button:hover {
+    background: #2ca8d1;
+}
+
+.form-footer {
+    text-align: center;
+}
+
+.form-footer a {
+    color: #3595b4;
+}
+
+.form-forgot {
+    color: #3595b4 !important;
+    padding: 0.3em 1em;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-form {
+    width: 22em;
+}
+</style>
