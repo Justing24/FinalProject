@@ -50,7 +50,7 @@ let isOpen = ref(false);
               <div class="dropdown-trigger">
                 <button v-if="session.user == null || session.user.firstName == 'Guest'" @click="isActive = !isActive" class="button" aria-haspopup="true"
                   aria-controls="dropdown-menu3">
-                  <span>User Log in</span>
+                  <span>Log in</span>
                   <span class="icon is-small">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </span>
