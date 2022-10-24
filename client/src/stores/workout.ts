@@ -3,12 +3,12 @@ import { reactive } from "vue";
 import session, { login, logout } from '../stores/session' 
 
 export class workouData {
-    public user: string | undefined
+    public user: string | undefined;
     public title: string | undefined;
     public date: string | undefined;
     public duration: string | undefined;
-    public location: string | undefined
-    public type: string | undefined
+    public location: string | undefined;
+    public type: string | undefined;
 }
 
 
