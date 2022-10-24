@@ -15,7 +15,7 @@ import session, { login, logout } from '../stores/session' ;
             <div class="card-content">
             
                 <div class="content">
-                    <img src="../assets/logo.jpg" width="112" height="40">
+                    <img src="../assets/logo.jpg" width="112" height="60">
                     <P>Welcome , Use the Navigation Bar to go through my website!!</P>
                 </div>
             </div>
