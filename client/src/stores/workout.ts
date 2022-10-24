@@ -7,8 +7,7 @@ export class workouData {
     public title: string | undefined;
     public date: string | undefined;
     public duration: string | undefined;
-
-    public type: string | undefined;
+     public type: string | undefined;
 }
 
 
