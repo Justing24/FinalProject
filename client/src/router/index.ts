@@ -71,11 +71,13 @@ const router = createRouter({
       name: 'admin',
       component: AdminView,
       beforeEnter: (to, from) => {
-        if(session.user?.firstName !='Justin' || session.user?.lastName !='Ginese'){
-          return '/home';
+       
+        if(!session.user){
+          return '/';
+        }
         }
       }
-    }
+    
   
 
     
