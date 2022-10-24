@@ -8,22 +8,15 @@ import session, { login, logout } from '../stores/session' ;
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title">
-                    Current User
+                    <p class="title is-4">{{session?.user?.firstName}} {{session?.user?.lastName}} </p>
                 </p>
             </header>
         
             <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">{{session?.user?.firstName}} {{session?.user?.lastName}} </p>
-                        <p class="subtitle is-4">@{{session.user?.firstName}} {{session.user?.lastName}}</p>
-                    </div>
-                </div>
+            
                 <div class="content">
-                
-                    <br>
+                    <img src="../assets/logo.jpg" width="112" height="40">
+                    <P>Welcome , Use the Navigation Bar to go through my website!!</P>
                 </div>
             </div>
         </div>

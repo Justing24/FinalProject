@@ -1,14 +1,14 @@
 <template>
     <div>
-        <article class="message">
+        <article class="message is-info">
             <div class="message-header">
                 <p>Admin</p>
             </div>
             <div class="message-body">
 
-                <h1>THIS IS AN ADMIN PAGE\
+                <h1>THIS IS AN ADMIN PAGE
 
-
+<br>
 
                     Data will be added soon.....
                 </h1>

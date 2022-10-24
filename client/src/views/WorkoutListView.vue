@@ -30,8 +30,7 @@
                                     
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">{{ workout.user }}</p>
-                                    <p class="subtitle is-4">@{{ workout.user }}</p>
+                                    <p class="title">{{ workout.user }}</p>
                                 </div>
                             </div>
 
