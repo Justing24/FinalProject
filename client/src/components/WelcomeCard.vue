@@ -22,9 +22,9 @@ import session, { login, logout } from '../stores/session' ;
         </div>
     </div>
     <div class="column">
-        <article class="message is-link">
+        <article class="message">
   <div class="message-body">
-        Welcome back <strong>{{session?.user?.firstName}} {{session?.user?.lastName}}</strong>! 
+        Welcome <strong>{{session?.user?.firstName}} {{session?.user?.lastName}}</strong>! 
         
   </div>
 </article>

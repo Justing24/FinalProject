@@ -34,12 +34,6 @@ function SubmitForm() {
             <label class="label">Title</label>
             <div class="control">
                 <input  class="input"  placeholder="Enter Title" v-model="title"/>
-                <span class="icon">
-                    <i class="fas fa-envelope fa-xs"></i>
-                </span>
-                <span class="icon">
-                    <i class="fas fa-check fa-xs"></i>
-                </span>
             </div>
         </div>
 
@@ -50,12 +44,7 @@ function SubmitForm() {
 
             <div class="control">
                 <input class="input"  placeholder="Enter Type of Workout" v-model="type"/>
-                <span class="icon">
-                    <i class="fas fa-envelope fa-lg"></i>
-                </span>
-                <span class="icon">
-                    <i class="fas fa-check fa-lg"></i>
-                </span>
+               
             </div>
         </div>
 
@@ -64,12 +53,7 @@ function SubmitForm() {
 
             <div class="control">
                 <input class="input"  placeholder="Enter Duration" v-model="duration"/>
-                <span class="icon">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon">
-                    <i class="fas fa-check"></i>
-                </span>
+                
             </div>
         </div>
 
@@ -78,12 +62,7 @@ function SubmitForm() {
 
             <div class="control">
                 <input class="input"  placeholder="Enter Date" v-model="date"/>
-                <span class="icon">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon">
-                    <i class="fas fa-check"></i>
-                </span>
+               
             </div>
         </div>
         <div class="control">
