@@ -37,7 +37,7 @@
                             <div class="content">
                                 {{ workout.type }}
                                 {{ workout.duration }}
-                                {{ workout.location }}
+                               
                                 <br>
                                 <p>{{ workout.date }}</p>
                             </div>

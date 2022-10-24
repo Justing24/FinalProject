@@ -9,7 +9,7 @@ import NavVue from './components/Nav.vue';
     <NavVue></NavVue>
   </header>
 
-  <RouterView />
+  <RouterView/>
 </template>
 
 <style scoped>

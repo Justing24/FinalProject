@@ -13,7 +13,6 @@
         <div class="message-body" v-for="(workout, i) in workouts" :key="i">
                     {{ workout.user }}
                     {{ workout.title }}
-                    {{ workout.location }}
                     {{ workout.type }}
                     {{ workout.duration }}
                     {{ workout.date }}
