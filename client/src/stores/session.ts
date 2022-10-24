@@ -7,7 +7,7 @@ import { reactive } from "vue";
 export class User {
     public firstName: string | undefined;
     public lastName: string | undefined;
-    public image: string | undefined;
+
 }
 
 
@@ -16,11 +16,11 @@ const session = reactive( {
 });
 
 
-export function login(firstName: string, lastName: string, image: string): void {
+export function login(firstName: string, lastName: string): void {
     session.user = {
         firstName,
-        lastName,
-        image
+        lastName
+       
        
     };
     router.push('/home');
