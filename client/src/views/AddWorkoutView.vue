@@ -13,7 +13,6 @@ let date = ref("")
 
 
 function SubmitForm() {
-    console.log(picture.value)
    addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,location.value,type.value)
 
   }
