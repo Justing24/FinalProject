@@ -6,14 +6,13 @@ import { ref } from 'vue';
 import router from '../router'
 
 let title = ref("")
-let location = ref("")
 let type = ref("")
 let duration = ref("")
 let date = ref("")
 
 
 function SubmitForm() {
-   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,location.value,type.value)
+   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,type.value)
 
   }
 
@@ -45,20 +44,6 @@ function SubmitForm() {
         </div>
 
         
-
-        <div class="field">
-            <label class="label">Location</label>
-
-            <div class="control">
-                <input class="input"  placeholder="Enter Location" v-model="location"/>
-                <span class="icon">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon">
-                    <i class="fas fa-check"></i>
-                </span>
-            </div>
-        </div>
 
         <div class="field">
             <label class="label">Type</label>
