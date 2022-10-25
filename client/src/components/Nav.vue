@@ -38,16 +38,20 @@ let isOpen = ref(false);
           Stats
         </router-link>
 
-
+       
       
       </div>
 
       <div class="navbar-end">
+        <router-link to="/adduser" class="navbar-item">
+          Sign Up
+        </router-link>
         <div class="navbar-item">
           <div class="buttons">
             
             <div class="dropdown is-active">
               <div class="dropdown-trigger">
+              
                 <button v-if="session.user == null || session.user.firstName == 'Guest'" @click="isActive = !isActive" class="button" aria-haspopup="true"
                   aria-controls="dropdown-menu3">
                   <span>Log in</span>
