@@ -20,19 +20,14 @@ import session, { login, logout } from '../stores/session' ;
                         <p class="subtitle is-6">@{{session.user?.firstName}} {{session.user?.lastName}}</p>
                     </div>
                 </div>
-                <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
-                    <br>
-                </div>
+            
             </div>
         </div>
     </div>
     <div class="column is-half">
         <article class="message is-link">
   <div class="message-body">
-        Welcome back <strong>{{session?.user?.firstName}} {{session?.user?.lastName}}</strong>! You can visit the various links around the nav bar, or log out for another user to view instead.
+        Welcome back <strong>{{session?.user?.firstName}} {{session?.user?.lastName}}</strong>!
         
   </div>
 </article>
