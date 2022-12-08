@@ -1,6 +1,8 @@
+import myFetch from "@/services/myFetch";
 import router from "@/router";
-import { reactive } from "vue";
+import { reactive, watch } from "vue";
 import session, { login, logout } from '../stores/session' 
+import { api } from "./session";
 
 export class workouData {
     public user: string | undefined;
@@ -12,33 +14,72 @@ export class workouData {
 
 
 
-const workout = reactive( [
-        { user:'Justin Ginese',title: '5 mile walk', date: 'Oct 10 2022', duration: '30 mins',  type: 'Endurance' },
-        { user:'Justin Ginese', title: '250 Pushups', date: 'Oct 09 2022', duration: '40 mins',  type: 'Strength' },
-       
-    ] as workouData[]
-);
-
-
-export function addWorkout(user: string,title: string, date: string, duration: string,  type: string): void {
-
-    workout.unshift({ user,title, date, duration, type });
-    router.push('/workout')
-
-}
-
-export function deleteWorkout(index: number) {
+export function getWorkout() {
+    return api<workouData[]>('posts');
+ }
+ 
+ export function getSpecificWorkout(title: string) {
+     return api<workouData>(`posts/${title}`);
+ }
+ 
+ let workout = reactive([] as workouData[]);
+ 
+ export function load () {
+     myFetch('/api/v1/posts')
+     .then((data) => {
+         workout.splice(0, workout.length, ...data as workouData[]);
+ 
+     })
+ }
+ 
+ export function addWorkouts (post: workouData) {
+     myFetch('/api/v1/posts', post, 'POST')
+     .then((data) => {
+         workout.push(data as workouData);
+     })
+ }
+ 
+ 
+ export function deleteWorkout(id: string){
+ 
+     return api<workouData>(`posts/${id}`, {}, 'DELETE');
+ 
+ }
+ 
+ export function addWorkout(user: string,title: string, date: string, duration: string, location: string, picture: string, type: string): void {
     
-        workout.splice(index, 1); 
-}
+     workout.unshift({ user,title, date, duration, type });
+     router.push('/workout')
+ 
+ }
+ 
+ 
 
-export function editWorkout(index: number, user: string, title: string, date: string, duration: string, type: string){
-    
-    workout.splice(index, 1);
-    workout.unshift({ user,title, date, duration, type });
-    router.push('/workout')
+ export function editWorkout(index: number,user: string,title: string, date: string, duration: string, location: string, picture: string, type: string){
+     //very rough draft just deletes and replaces new post simultainiusly
+     workout.splice(index, 1);
+     workout.unshift({ user,title, date, duration, type });
+     router.push('/workout')
+ 
+ 
+ }
+ 
+ export interface workout {
+     workout: workouData[];
+     addWorkout: (user: string,title: string, date: string, duration: string, type: string) => void;
+     deleteWorkout: (index: number) => void;
+     editWorkout: (index: number,user: string,title: string, date: string, duration: string, type: string) => void;
+     load: () => void;
+ }   
+ 
+ export interface workoutData {
+     user: string,
+     title: string,
+     date: string,
+     duration: string,
+     type: string 
+ }   
+ 
+ 
+ export default workout;
 
-
-}
-
-export default workout;

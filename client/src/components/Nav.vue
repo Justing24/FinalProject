@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+
+import { reactive, ref } from 'vue';
+import { getPeople, type UserData, type addUser } from '@/stores/users';
 import { RouterLink } from 'vue-router';
-import session, { login, logout } from '../stores/session' 
+import session, { login, logout } from '../stores/session'
 import LoginBadge from './LoginBadge.vue';
 
 let isActive = ref(false);

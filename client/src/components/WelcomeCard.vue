@@ -1,5 +1,5 @@
-
 <script setup lang="ts">
+import { getPeople } from '@/stores/users';
 import session, { login, logout } from '../stores/session' ;
 </script>
 <template>
@@ -8,23 +8,31 @@ import session, { login, logout } from '../stores/session' ;
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title">
-                    <p class="title is-4">{{session?.user?.firstName}} {{session?.user?.lastName}} </p>
+                    Current User
                 </p>
             </header>
-        
             <div class="card-content">
-            
+                <div class="media">
+                    <div class="media-left">
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">{{session?.user?.firstName}} {{session?.user?.lastName}} </p>
+                        <p class="subtitle is-6">@{{session.user?.firstName}} {{session.user?.lastName}}</p>
+                    </div>
+                </div>
                 <div class="content">
-                    <img src="../assets/logo.jpg" width="112" height="60">
-                    <P>Welcome , Use the Navigation Bar to go through my website!!</P>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br>
                 </div>
             </div>
         </div>
     </div>
-    <div class="column">
-        <article class="message">
+    <div class="column is-half">
+        <article class="message is-link">
   <div class="message-body">
-        Welcome <strong>{{session?.user?.firstName}} {{session?.user?.lastName}}</strong>! 
+        Welcome back <strong>{{session?.user?.firstName}} {{session?.user?.lastName}}</strong>! You can visit the various links around the nav bar, or log out for another user to view instead.
         
   </div>
 </article>

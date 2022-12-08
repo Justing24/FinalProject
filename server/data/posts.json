@@ -1,0 +1,19 @@
+[
+    {
+        "user": "Justin Ginese",
+        "title": "5 Mile Walk",
+        "date": "Dec 05 2022",
+        "duration": "1 Hour",
+           "type": "Endurance"
+    }
+    ,
+    {
+     
+        "user": "Billy Smith",
+        "title": "1 Mile Sprint",
+        "date": "Dec 06 2020",
+        "duration": "5 Minutes",
+        "type": "Agility"
+    }
+
+]

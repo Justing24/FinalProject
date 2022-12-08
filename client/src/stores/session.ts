@@ -1,4 +1,5 @@
 import router from "@/router";
+import myFetch from "@/services/myFetch";
 import { reactive } from "vue";
 
 /**
@@ -13,6 +14,7 @@ export class User {
 
 const session = reactive( {
     user: null as User | null
+
 });
 
 
@@ -27,6 +29,16 @@ export function login(firstName: string, lastName: string): void {
     
 }
 
+
+export async function api<T>(url: string, data: any = null, method?: string) {
+    try {
+        return await myFetch<T>(url, data, method);
+    } catch (error) {
+        setError(error as string);
+        console.log(session.error);
+        return {} as T;
+    }
+}
 
 export function logout() {
     session.user = null;

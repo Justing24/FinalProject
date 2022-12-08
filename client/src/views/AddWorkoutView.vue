@@ -1,9 +1,9 @@
-
 <script  setup lang="ts">
-import workouts, { addWorkout } from '../stores/workout'
-import session, { login, logout } from '../stores/session'
+import workouts, { addWorkouts } from '../stores/workout'
+import session, { api, login, logout } from '../stores/session'
 import { ref } from 'vue';
 import router from '../router'
+import myFetch from '@/services/myFetch';
 
 let title = ref("")
 let type = ref("")
@@ -12,9 +12,24 @@ let date = ref("")
 
 
 function SubmitForm() {
-   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,type.value)
-
-  }
+    const data = {
+     user: `${session?.user?.firstName} ${session?.user?.lastName}`,
+     title: title.value,
+     date: date.value,
+     duration: duration.value,
+     type: type.value
+    }
+    console.log(data);
+    console.log(JSON.stringify(data));
+    myFetch('posts', data, 'POST')
+    .then((response) => {
+        console.log(response);
+        router.push('/workout')
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+}   
 
 
 </script>

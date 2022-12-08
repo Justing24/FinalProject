@@ -4,23 +4,27 @@
   "description": "Final Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm i -ws && npm run build -ws",
     "dev": "nodemon --watch server server/index.js",
     "start": "node server/index.js"
   },
+  "workspaces": [
+    "client"
+  ],
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AmirMarji/Final-Project-Web-2022.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AmirMarji/Final-Project-Web-2022/issues"
-  },
-  "homepage": "https://github.com/AmirMarji/Final-Project-Web-2022#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "app.vue": "^0.1.10",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "mongodb": "^4.1.1",
+    "vue-router": "^4.1.6",
+    "bulma": "^0.7.2",
+    "node-sass": "^4.9.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

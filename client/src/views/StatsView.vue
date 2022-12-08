@@ -22,10 +22,14 @@
 </template>
 
 <script setup lang="ts">
-import workouts, { deleteWorkout } from '../stores/workout'
-
+import { reactive } from 'vue';
+import workouts, { deleteWorkout, getWorkout } from '../stores/workout'
+const statWorkouts = reactive([] as any[]);
+getWorkout().then((data) => {
+    statWorkouts.push(...data);
+    console.log(statWorkouts);
+});
 </script>
 
 <style scoped>
-
 </style>

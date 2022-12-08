@@ -1,3 +1,23 @@
+<script setup lang="ts">
+// import workouts, { deleteWorkout } from '../stores/workout'
+import router from '@/router';
+import { reactive } from 'vue';
+import session, { login, logout } from '../stores/session' 
+import { workouData, deleteWorkout, getWorkout} from '../stores/workout';
+const workouts = reactive([] as any[]);
+getWorkout().then((data) => {
+    workouts.push(...data);
+    console.log(workouts);
+});
+async function deleteWorkoutByClient(id:string, index: number) {
+    await deleteWorkout(id);
+    console.log(workouts); 
+    workouts.splice(index, 1);
+    console.log(workouts);
+    router.push('/workout');
+}
+</script>
+
 <template>
     <div>
         <article class="message is-info">
@@ -52,13 +72,3 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import workouts, { deleteWorkout } from '../stores/workout'
-import session, { login, logout } from '../stores/session' 
-import { useAttrs } from 'vue';
-
-</script>
-
-<style scoped>
-
-</style>
