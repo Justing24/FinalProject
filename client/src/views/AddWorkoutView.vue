@@ -57,7 +57,7 @@ function SubmitForm() {
         <label class="label">Type</label>
             <SearchAutocomplete
 
-             class="input"  placeholder="Enter Type" v-model="type"
+            
       :items="[
         'Agility',
         'Sprint',
@@ -72,7 +72,6 @@ function SubmitForm() {
              
                
             
-    
 
         <div class="field">
             <label class="label">Duration</label>

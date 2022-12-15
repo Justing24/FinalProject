@@ -120,6 +120,7 @@
   <style>
     .autocomplete {
       position: relative;
+
     }
   
     .autocomplete-results {
@@ -127,7 +128,7 @@
       margin: 0;
       border: 1px solid #eeeeee;
       height: 120px;
-      overflow: auto;
+    
     }
   
     .autocomplete-result {
@@ -139,7 +140,7 @@
   
     .autocomplete-result.is-active,
     .autocomplete-result:hover {
-      background-color: #4AAE9B;
+      background-color: teal;
       color: white;
     }
   </style>
