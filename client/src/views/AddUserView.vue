@@ -12,7 +12,7 @@ let lastName = ref("")
 
 
 function SubmitForm() {
-   addUser(user.value,firstName.value,lastName.value)
+   addUser(user.value,)
 
   }
 

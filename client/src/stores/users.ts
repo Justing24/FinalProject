@@ -27,7 +27,7 @@ let peopleArray = reactive([] as UserData[]);
 export function load () {
     myFetch('/api/v1/people')
     .then((data) => {
-        peopleArray.splice(0, peopleArray.length, ...data as peopleData[]);
+        peopleArray.splice(0, peopleArray.length, ...data as UserData[]);
 
     })
 }
