@@ -63,7 +63,7 @@ async function deleteWorkoutByClient(id:string, index: number) {
                             </div>
                         </div>
                     </div>
-                    <button  class="button is-light" @click="deleteWorkout(i)">Delete</button>
+                    
                     
                 </div>
 
