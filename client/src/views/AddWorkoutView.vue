@@ -4,6 +4,7 @@ import session, { api, login, logout } from '../stores/session'
 import { ref } from 'vue';
 import router from '../router'
 import myFetch from '@/services/myFetch';
+import SearchAutocomplete from '../components/SearchAutocomplete.vue';
 
 let title = ref("")
 let type = ref("")
@@ -52,16 +53,26 @@ function SubmitForm() {
             </div>
         </div>
 
-        
+    
+        <label class="label">Type</label>
+            <SearchAutocomplete
 
-        <div class="field">
-            <label class="label">Type</label>
-
-            <div class="control">
-                <input class="input"  placeholder="Enter Type of Workout" v-model="type"/>
+             class="input"  placeholder="Enter Type" v-model="type"
+      :items="[
+        'Agility',
+        'Sprint',
+        'Endurance',
+        'Strength',
+        'Marathon'
+      
+      ]"
+      
+      
+    /> 
+             
                
-            </div>
-        </div>
+            
+    
 
         <div class="field">
             <label class="label">Duration</label>

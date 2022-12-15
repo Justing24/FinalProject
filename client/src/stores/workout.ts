@@ -56,7 +56,6 @@ export function getWorkout() {
  
 
  export function editWorkout(index: number,user: string,title: string, date: string, duration: string, location: string, picture: string, type: string){
-     //very rough draft just deletes and replaces new post simultainiusly
      workout.splice(index, 1);
      workout.unshift({ user,title, date, duration, type });
      router.push('/workout')
