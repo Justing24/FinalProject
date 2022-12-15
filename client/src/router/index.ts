@@ -5,7 +5,6 @@ import WorkoutListView from '../views/WorkoutListView.vue'
 import AddWorkoutView from '../views/AddWorkoutView.vue'
 import StatsView from '../views/StatsView.vue'
 import AdminView from '../views/AdminView.vue'
-import AddUserView from '../views/AddUserView.vue'
 import session from '@/stores/session'
 
 
@@ -53,18 +52,7 @@ const router = createRouter({
         }
       }
     }
-    ,
-    {
-      path: '/adduser',
-      name: 'adduser',
-      component: AddUserView,
-      beforeEnter: (to, from) => {
-        
-        if(session.user){
-          return '/home';
-        }
-      }
-    }
+    
     ,
    
     {
