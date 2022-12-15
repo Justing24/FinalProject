@@ -5,9 +5,9 @@ import session, { login, logout } from '../stores/session'
 import { api } from "./session";
 
 export class UserData {
-    public user: string | undefined
-    public firstName: string | undefined
-    public lastName: string | undefined
+    public user: string | undefined;
+    public firstName: string | undefined;
+    public lastName: string | undefined;
     
 
 }
